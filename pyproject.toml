@@ -1,0 +1,35 @@
+[project]
+name = "fastbook-tut"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "torch",
+    "torchvision",
+    "fastai>=2.0.0",
+    "graphviz",
+    "ipywidgets",
+    "matplotlib",
+    "nbdev>=0.2.12",
+    "pandas",
+    "scikit_learn",
+    "azure-cognitiveservices-search-imagesearch",
+    "sentencepiece",
+    "jupyter>=1.1.1",
+    "ipykernel>=6.29.5",
+    "fastbook>=0.0.29",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cpu" },
+]
+torchvision = [
+  { index = "pytorch-cpu" },
+]
